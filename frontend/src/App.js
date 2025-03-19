@@ -1,20 +1,25 @@
-import React, { useState } from "react";
-import LandingPage from "./pages/LandingPage";
-import BlogShowcase from "./pages/BlogShowcase";
-import CreateBlog from "./pages/CreateBlog";
-import AuthPage from "./pages/AuthPage"; // Single component for Login/Signup
+import logo from './logo.svg';
+import './App.css';
 
 function App() {
-    const [currentPage, setCurrentPage] = useState("landing"); // Track active page
-
-    return (
-        <div>
-            {currentPage === "landing" && <LandingPage setCurrentPage={setCurrentPage} />}
-            {currentPage === "auth" && <AuthPage setCurrentPage={setCurrentPage} />}
-            {currentPage === "blogs" && <BlogShowcase setCurrentPage={setCurrentPage} />}
-            {currentPage === "create" && <CreateBlog setCurrentPage={setCurrentPage} />}
-        </div>
-    );
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
+  );
 }
 
 export default App;
